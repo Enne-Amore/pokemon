@@ -1,0 +1,13 @@
+@charset 'UTF-8';
+
+/* A mente do site */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font: 2vw Arial, Helvetica, sans-serif;
+    max-width: 100%;
+    height: auto;
+}
