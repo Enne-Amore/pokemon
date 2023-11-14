@@ -67,6 +67,26 @@ html {
     background-color: var(--vermelha-clara);
     color: white;
 }
+#cabecalho .nav ul #voltar #icon-back {
+    font-size: 1.5em
+}
+#cabecalho .nav ul #voltar {
+    background-color: var(--azul);
+    padding: 1% 3%;
+    border-radius: 1em;
+    display: flex;
+    align-items: center;
+    gap: 0.2em;
+}
+#cabecalho .nav ul #voltar:hover {
+    background-color: white;
+    color: var(--azul);
+    padding: 1% 4.5%;
+}
+#cabecalho .nav ul #voltar:active {
+    background-color: var(--vermelha-escura);
+    color: white;
+}
 
 /* O conteúdo do site */
 #conteudo {
@@ -147,6 +167,26 @@ html {
     display: flex;
     align-items: center;
     align-items: end;
+}
+
+#conteudo #topo {
+    position: fixed;
+    background-color: var(--azul);
+    color: white;
+    border-radius: 10em;
+    padding: 1.4%;
+    right: 3%;
+    bottom: 5%;
+    font-size: 1.7em;
+    cursor: pointer;
+    transition-duration: .2s;
+}
+#conteudo #topo:hover {
+    background-color: var(--vermelha-escura);
+}
+#conteudo #topo:active {
+    background-color: white;
+    color: var(--vermelha-clara);
 }
 
 /* O rodapé do site */
