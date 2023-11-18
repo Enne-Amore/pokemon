@@ -1,0 +1,68 @@
+/* O conteúdo do site */
+#conteudo.planta {
+    background-color: var(--verde-clara);
+}
+#conteudo.fogo {
+    background-color: var(--vermelha-escura);
+}
+#conteudo.agua {
+    background-color: var(--azul);
+}
+#conteudo {
+    margin: 5% auto;
+    color: white;
+}
+#conteudo hr {
+    border: 3px solid white;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.342);
+}
+
+#conteudo .est-evolutivo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3em;
+    padding: 2%;
+}
+#conteudo .est-evolutivo .pokemon {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1em;
+}
+#conteudo .est-evolutivo .pokemon .tipos {
+    display: flex;
+}
+#conteudo .est-evolutivo .pokemon .tipos .tipo {
+    padding: 5%;
+    font-weight: bold;
+}
+#conteudo .est-evolutivo .pokemon .tipos .tipo.planta {
+    background-color: var(--verde-escura);
+}
+#conteudo .est-evolutivo .pokemon .tipos .tipo.veneno {
+    background-color: purple;
+}
+
+#conteudo .est-evolutivo .tabela {
+    background-color: black;
+    border-radius: 0.5em;
+    border-collapse: collapse;
+    width: 25%;
+}
+#conteudo .est-evolutivo .tabela.esquerda {
+    text-align: left;
+}
+#conteudo .est-evolutivo .tabela.direita {
+    text-align: right;
+}
+#conteudo .est-evolutivo .tabela .nome tr th {
+    border-radius: 0.3em 0.3em 0 0;
+    background-color: gray;
+    padding: 3%;
+    font-size: 1.2em;
+}
+#conteudo .est-evolutivo .tabela .dados tr td {
+    padding: 2%;
+    font-size: 0.9em;
+}

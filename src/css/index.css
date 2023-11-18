@@ -1,0 +1,102 @@
+@charset 'UTF-8';
+
+/* O conteúdo do site */
+#conteudo {
+    margin: 5% auto;
+}
+/* Sobre o site */
+#conteudo .indice {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 3%;
+    border-radius: 2em 2em 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#conteudo .indice h1 {
+    font-size: 1.4em;
+}
+/* Personagens */
+#conteudo .evolucoes {
+    color: white;
+    padding: 2% 8%;
+    font-size: 0.9em;
+    display: flex;
+    align-items: end;
+}
+#conteudo .evolucoes .introducao {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    margin: auto 5%;
+}
+#conteudo .evolucoes .introducao div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+#conteudo .evolucoes .introducao a {
+    text-decoration: none;
+    background-color: white;
+    color: var(--verde-escura);
+    font-weight: bolder;
+    width: max-content;
+    padding: 2% 4%;
+    border-radius: 1em;
+    transition-duration: .2s;
+}
+#conteudo .evolucoes .introducao a:hover {
+    background-color: var(--verde-escura);
+    color: white;
+}
+#conteudo .evolucoes .introducao a:active {
+    background-color: var(--verde-clara);
+    color: white;
+}
+#conteudo .evolucoes .est-evolutivos {
+    display: flex;
+    align-items: end;
+    gap: 1em;
+}
+#conteudo .evolucoes .est-evolutivos img {
+    width: 30%;
+    height: auto;
+}
+/* Especificidades para cada personagem */
+#conteudo .evolucoes#planta {
+    background-color: var(--verde-clara);
+}
+#conteudo .evolucoes#fogo {
+    background-color: var(--vermelha-escura);
+}
+#conteudo .evolucoes#agua{
+    background-color: var(--azul);
+}
+#conteudo .evolucoes#planta .introducao, #conteudo .evolucoes#agua .introducao {
+    text-align: right;
+    display: flex;
+    align-items: center;
+    align-items: end;
+}
+
+#conteudo #topo {
+    position: fixed;
+    background-color: var(--azul);
+    color: white;
+    border-radius: 10em;
+    padding: 1.4%;
+    right: 3%;
+    bottom: 5%;
+    font-size: 1.7em;
+    cursor: pointer;
+    transition-duration: .2s;
+}
+#conteudo #topo:hover {
+    background-color: var(--vermelha-escura);
+}
+#conteudo #topo:active {
+    background-color: white;
+    color: var(--vermelha-clara);
+}

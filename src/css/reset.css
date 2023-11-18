@@ -1,0 +1,23 @@
+/* A mente do site */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font: 2vw Arial, Helvetica, sans-serif;
+    max-width: 100%;
+    height: auto;
+}
+/* Rolamento suave do site */
+html {
+    scroll-behavior: smooth;
+}
+/* Variáveis css para melhor atribuição de elementos visuais */
+:root {
+    --vermelha-escura: #D90D32;
+    --vermelha-clara: #D90D43;
+    --azul: #29A5F2;
+    --verde-escura: #01261F;
+    --verde-clara: #51A657;
+}

@@ -1,0 +1,120 @@
+
+/* O cabeçalho do site */
+#cabecalho .logo {
+    background-color: var(--vermelha-escura);
+    padding: 1%;
+    border-radius: 0 0 10em 10em;
+}
+#cabecalho .logo a {
+    display: inline-flex;
+    margin: auto 40%;
+}
+#cabecalho .logo a img {
+    width: 100%;
+    height: auto;
+}
+
+#cabecalho .nav {
+    background-image: linear-gradient(to bottom, var(--vermelha-escura), var(--vermelha-clara));
+    padding: 1%;
+    border-radius: 0 0 10em 10em;
+    margin: auto 9%;
+}
+#cabecalho .nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto 8%;
+}
+#cabecalho .nav ul a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    padding: 2% 0%;
+    transition-duration: .2s;
+}
+#cabecalho .nav ul a:hover {
+    background-color: white;
+    color: var(--vermelha-escura);
+    border-radius: 1em;
+    padding: 2% 3%;
+}
+#cabecalho .nav ul a:active {
+    background-color: var(--vermelha-clara);
+    color: white;
+}
+#cabecalho .nav ul #voltar #icon-back {
+    font-size: 1.5em
+}
+#cabecalho .nav ul #voltar {
+    background-color: var(--azul);
+    padding: 1% 3%;
+    border-radius: 1em;
+    display: flex;
+    align-items: center;
+    gap: 0.2em;
+}
+#cabecalho .nav ul #voltar:hover {
+    background-color: white;
+    color: var(--azul);
+    padding: 1% 4.5%;
+}
+#cabecalho .nav ul #voltar:active {
+    background-color: var(--vermelha-escura);
+    color: white;
+}
+
+/* O rodapé do site */
+#rodape {
+    background-color: var(--vermelha-clara);
+    color: white;
+    border-radius: 5em 5em 0 0;
+    padding: 3%;
+}
+
+#rodape p {
+    text-align: center;
+}
+#rodape p a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+#rodape p a:hover {
+    padding: 0.5%;
+}
+
+#rodape hr {
+    margin: 2% 5%;
+}
+
+#rodape .autorias {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+#rodape .autorias ul {
+    display: flex;
+    flex-direction: column;
+}
+#rodape .autorias ul a:not(:last-child) {
+    margin-bottom: 4%;
+}
+#rodape .autorias ul a:hover {
+    padding: 2%;
+}
+#rodape .autorias ul a, #rodape p a {
+    text-decoration: none;
+    color: var(--azul);
+    font-weight: bolder;
+    width: max-content;
+    transition-duration: .2s;
+}
+#rodape .autorias ul a:hover, #rodape p a:hover {
+    background-color: #29A5F2;
+    color: white;
+    border-radius: 1em;
+}
+#rodape .autorias ul a:active, #rodape p a:active {
+    background-color: white;
+    color: var(--azul);
+}

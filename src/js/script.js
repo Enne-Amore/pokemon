@@ -19,7 +19,7 @@ document.addEventListener('scroll', ocultar)
 
 // Função de ocultar
 function ocultar() {
-    if (window.scrollY > 10) {
+    if (window.scrollY > 400) {
         topo.style.display = 'flex'
     } else {
         topo.style.display = 'none'
