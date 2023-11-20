@@ -37,21 +37,23 @@
     flex-direction: column;
     gap: 5px;
 }
-#conteudo .evolucoes .introducao a {
-    text-decoration: none;
+#conteudo .evolucoes .introducao button {
+    border: 0;
     background-color: white;
     color: var(--verde-escura);
     font-weight: bolder;
+    font-size: 1em;
     width: max-content;
     padding: 2% 4%;
     border-radius: 1em;
     transition-duration: .2s;
+    cursor: pointer;
 }
-#conteudo .evolucoes .introducao a:hover {
+#conteudo .evolucoes .introducao button:hover {
     background-color: var(--verde-escura);
     color: white;
 }
-#conteudo .evolucoes .introducao a:active {
+#conteudo .evolucoes .introducao button:active {
     background-color: var(--verde-clara);
     color: white;
 }

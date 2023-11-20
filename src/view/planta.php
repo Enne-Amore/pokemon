@@ -36,22 +36,33 @@
     </header>
 
     <main id="conteudo" class="planta">
+
         <section class="est-evolutivo">
+
             <article class="pokemon">
+
                 <figure class="img">
                     <img src="../img/" alt="">
                 </figure>
+
+                <!--Tipagem do pokémon-->
                 <article class="tipos">
                     <div class="tipo planta"></div>
                     <div class="tipo veneno"></div>
                 </article>
+
             </article>
+
             <table class="tabela esquerda">
+
+                <!--Nome do pokémon-->
                 <thead class="nome">
                     <tr>
                         <th scope="col"></th>
                     </tr>
                 </thead>
+
+                <!--Dados do pokémon-->
                 <tbody class="dados">
                     <tr>
                         <td>Estágio Evolutivo: </td>
@@ -72,9 +83,13 @@
                         <td>Defesa: </td>
                     </tr>
                 </tbody>
+
             </table>
+
         </section>
+
         <hr>
+
         <section class="est-evolutivo">
             <article class="pokemon">
                 <figure class="img">
@@ -154,6 +169,7 @@
         </section>
     </main>
 
+
     <footer id="rodape">
         <p>
             Projeto passado por Leando e desenvolvido por <a href="https://github.com/Enne-Amore" rel="external" target="_blank">Enne</a> e <a href="https://github.com/ThiagoHenrique22" rel="external" target="_blank">Thiago.</a>
@@ -169,5 +185,33 @@
         </article>
     </footer>
 
+    <?php
+        include 'conexao.php';
+
+        // Consulta SQL para obter dados dos pokémons
+        $sql = "SELECT * FROM pokemon_geral";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+            // Output dos dados
+            while ($row = $result->fetch_assoc()) {
+                echo "<script>";
+                echo "document.querySelector('.img img').src = '../img/{$row['nome']}.png';";
+                echo "document.querySelector('.nome th').innerText = '{$row['nome']}';";
+                echo "document.querySelector('.est-evolutivo .tabela .dados tr:nth-child(1) td').innerText = '{$row['est_evolutivo']}';";
+                echo "document.querySelector('.est-evolutivo .tabela .dados tr:nth-child(2) td').innerText = '{$row['peso']}';";
+                echo "document.querySelector('.est-evolutivo .tabela .dados tr:nth-child(3) td').innerText = '{$row['altura']}';";
+                echo "document.querySelector('.est-evolutivo .tabela .dados tr:nth-child(4) td').innerText = '{$row['vida']}';";
+                echo "document.querySelector('.est-evolutivo .tabela .dados tr:nth-child(5) td').innerText = '{$row['ataque']}';";
+                echo "document.querySelector('.est-evolutivo .tabela .dados tr:nth-child(6) td').innerText = '{$row['defesa']}';";
+                echo "</script>";
+            }
+        } else {
+            echo "0 results";
+        }
+
+        $conn->close();
+    ?>
+    
 </body>
 </html>
