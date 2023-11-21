@@ -42,13 +42,13 @@
             <article class="pokemon">
 
                 <figure class="img">
-                    <img src="../img/" alt="">
+                    <img src="../img/Bulbasaur.png" alt="Bulbasaur">
                 </figure>
 
                 <!--Tipagem do pokémon-->
                 <article class="tipos">
-                    <div class="tipo planta"></div>
-                    <div class="tipo veneno"></div>
+                    <div class="tipo planta">planta</div>
+                    <div class="tipo veneno">veneno</div>
                 </article>
 
             </article>
@@ -65,22 +65,22 @@
                 <!--Dados do pokémon-->
                 <tbody class="dados">
                     <tr>
-                        <td>Estágio Evolutivo: </td>
+                        <td class="est-ev">Estágio Evolutivo: </td>
                     </tr>
                     <tr>
-                        <td>Peso: </td>
+                        <td class="peso">Peso: </td>
                     </tr>
                     <tr>
-                        <td>Altura: </td>
+                        <td class="altura">Altura: </td>
                     </tr>
                     <tr>
-                        <td>Vida: </td>
+                        <td class="vida">Vida: </td>
                     </tr>
                     <tr>
-                        <td>Ataque: </td>
+                        <td class="ataque">Ataque: </td>
                     </tr>
                     <tr>
-                        <td>Defesa: </td>
+                        <td class="defesa">Defesa: </td>
                     </tr>
                 </tbody>
 
@@ -108,22 +108,22 @@
                 </thead>
                 <tbody class="dados">
                     <tr>
-                        <td>Estágio Evolutivo: </td>
+                        <td class="est-ev">Estágio Evolutivo: </td>
                     </tr>
                     <tr>
-                        <td>Peso: </td>
+                        <td class="peso">Peso: </td>
                     </tr>
                     <tr>
-                        <td>Altura: </td>
+                        <td class="altura">Altura: </td>
                     </tr>
                     <tr>
-                        <td>Vida: </td>
+                        <td class="vida">Vida: </td>
                     </tr>
                     <tr>
-                        <td>Ataque: </td>
+                        <td class="ataque">Ataque: </td>
                     </tr>
                     <tr>
-                        <td>Defesa: </td>
+                        <td class="defesa">Defesa: </td>
                     </tr>
                 </tbody>
             </table>
@@ -147,22 +147,22 @@
                 </thead>
                 <tbody class="dados">
                     <tr>
-                        <td>Estágio Evolutivo: </td>
+                        <td class="est-ev">Estágio Evolutivo: </td>
                     </tr>
                     <tr>
-                        <td>Peso: </td>
+                        <td class="peso">Peso: </td>
                     </tr>
                     <tr>
-                        <td>Altura: </td>
+                        <td class="altura">Altura: </td>
                     </tr>
                     <tr>
-                        <td>Vida: </td>
+                        <td class="vida">Vida: </td>
                     </tr>
                     <tr>
-                        <td>Ataque: </td>
+                        <td class="ataque">Ataque: </td>
                     </tr>
                     <tr>
-                        <td>Defesa: </td>
+                        <td class="defesa">Defesa: </td>
                     </tr>
                 </tbody>
             </table>
@@ -186,25 +186,27 @@
     </footer>
 
     <?php
-        include 'conexao.php';
+        include '../php/conexao.php';
 
         // Consulta SQL para obter dados dos pokémons
-        $sql = "SELECT * FROM pokemon_geral";
+        $sql = "SELECT nome, est_evolutivo, peso, altura, vida, ataque, defesa FROM pokemon_geral ORDER BY id_pokemon";
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
-            // Output dos dados
+            $index = 1; // Começando em 1 para corresponder aos índices de :nth-child
             while ($row = $result->fetch_assoc()) {
+
                 echo "<script>";
-                echo "document.querySelector('.img img').src = '../img/{$row['nome']}.png';";
-                echo "document.querySelector('.nome th').innerText = '{$row['nome']}';";
-                echo "document.querySelector('.est-evolutivo .tabela .dados tr:nth-child(1) td').innerText = '{$row['est_evolutivo']}';";
-                echo "document.querySelector('.est-evolutivo .tabela .dados tr:nth-child(2) td').innerText = '{$row['peso']}';";
-                echo "document.querySelector('.est-evolutivo .tabela .dados tr:nth-child(3) td').innerText = '{$row['altura']}';";
-                echo "document.querySelector('.est-evolutivo .tabela .dados tr:nth-child(4) td').innerText = '{$row['vida']}';";
-                echo "document.querySelector('.est-evolutivo .tabela .dados tr:nth-child(5) td').innerText = '{$row['ataque']}';";
-                echo "document.querySelector('.est-evolutivo .tabela .dados tr:nth-child(6) td').innerText = '{$row['defesa']}';";
+                echo "document.querySelector('.est-evolutivo:nth-child($index) .nome th').innerText = '{$row['nome']}';";
+                echo "document.querySelector('.est-evolutivo:nth-child($index) .dados tr:nth-child(1) td').innerText += ' {$row['est_evolutivo']}º';";
+                echo "document.querySelector('.est-evolutivo:nth-child($index) .dados tr:nth-child(2) td').innerText += ' {$row['peso']}kg';";
+                echo "document.querySelector('.est-evolutivo:nth-child($index) .dados tr:nth-child(3) td').innerText += ' {$row['altura']}m';";
+                echo "document.querySelector('.est-evolutivo:nth-child($index) .dados tr:nth-child(4) td').innerText += ' {$row['vida']}';";
+                echo "document.querySelector('.est-evolutivo:nth-child($index) .dados tr:nth-child(5) td').innerText += ' {$row['ataque']}';";
+                echo "document.querySelector('.est-evolutivo:nth-child($index) .dados tr:nth-child(6) td').innerText += ' {$row['defesa']}';";
                 echo "</script>";
+
+                $index++;
             }
         } else {
             echo "0 results";
@@ -212,6 +214,8 @@
 
         $conn->close();
     ?>
+
+
     
 </body>
 </html>
