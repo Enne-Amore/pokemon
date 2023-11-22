@@ -8,10 +8,12 @@
 #conteudo.agua {
     background-color: var(--azul);
 }
+
 #conteudo {
     margin: 5% auto;
     color: white;
 }
+
 #conteudo hr {
     border: 3px solid white;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.342);
@@ -24,10 +26,13 @@
     gap: 3em;
     padding: 2%;
 }
+#conteudo .est-evolutivo.reverse {
+    flex-direction: row-reverse;
+}
 #conteudo .est-evolutivo .pokemon {
     display: flex;
     flex-direction: column;
-    align-items: end;
+    align-items: center;
     gap: 1em;
 }
 #conteudo .est-evolutivo .pokemon .tipos {
@@ -36,12 +41,22 @@
 #conteudo .est-evolutivo .pokemon .tipos .tipo {
     padding: 5%;
     font-weight: bold;
+    text-transform: uppercase;
 }
 #conteudo .est-evolutivo .pokemon .tipos .tipo.planta {
     background-color: var(--verde-escura);
 }
 #conteudo .est-evolutivo .pokemon .tipos .tipo.veneno {
     background-color: purple;
+}
+#conteudo .est-evolutivo .pokemon .tipos .tipo.fogo {
+    background-color: coral;
+}
+#conteudo .est-evolutivo .pokemon .tipos .tipo.voador {
+    background-color: grey;
+}
+#conteudo .est-evolutivo .pokemon .tipos .tipo.agua {
+    background-color: blue;
 }
 
 #conteudo .est-evolutivo .tabela {

@@ -63,6 +63,28 @@
     color: white;
 }
 
+/* O botão de voltar ao topo da página */
+#conteudo #topo {
+    position: fixed;
+    background-color: var(--azul);
+    color: white;
+    border-radius: 10em;
+    padding: 1.4%;
+    right: 3%;
+    bottom: 5%;
+    font-size: 1.7em;
+    cursor: pointer;
+    transition-duration: .2s;
+}
+#conteudo #topo:hover {
+    background-color: var(--vermelha-escura);
+}
+#conteudo #topo:active {
+    background-color: white;
+    color: var(--vermelha-clara);
+}
+
+
 /* O rodapé do site */
 #rodape {
     background-color: var(--vermelha-clara);

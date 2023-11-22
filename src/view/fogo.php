@@ -39,10 +39,10 @@
         <section class="est-evolutivo">
             <article class="pokemon">
                 <figure class="img">
-                    <img src="../img/" alt="">
+                    <img src="../img/Charmander.png" alt="Charmander">
                 </figure>
                 <article class="tipos">
-                    <div class="tipo fogo"></div>
+                    <div class="tipo fogo">fogo</div>
                 </article>
             </article>
             <table class="tabela esquerda">
@@ -74,13 +74,13 @@
             </table>
         </section>
         <hr>
-        <section class="est-evolutivo">
+        <section class="est-evolutivo reverse">
             <article class="pokemon">
                 <figure class="img">
-                    <img src="../img/" alt="">
+                    <img src="../img/Charmeleon.png" alt="Charmeleon">
                 </figure>
                 <article class="tipos">
-                    <div class="tipo fogo"></div>
+                    <div class="tipo fogo">fogo</div>
                 </article>
             </article>
             <table class="tabela direita">
@@ -115,11 +115,11 @@
         <section class="est-evolutivo">
             <article class="pokemon">
                 <figure class="img">
-                    <img src="../img/" alt="">
+                    <img src="../img/Charizard.png" alt="Charizard">
                 </figure>
                 <article class="tipos">
-                    <div class="tipo fogo"></div>
-                    <div class="tipo voador"></div>
+                    <div class="tipo fogo">fogo</div>
+                    <div class="tipo voador">voador</div>
                 </article>
             </article>
             <table class="tabela esquerda">
@@ -150,6 +150,12 @@
                 </tbody>
             </table>
         </section>
+
+        <!--Para voltar ao topo da tela-->
+        <span class="material-symbols-outlined" id="topo">
+            stat_3
+        </span>
+
     </main>
 
     <footer id="rodape">
@@ -166,6 +172,36 @@
             </ul>
         </article>
     </footer>
+
+    <?php
+        include '../php/conexao.php';
+
+        // Consulta SQL para obter dados dos pokémons
+        $sql = "SELECT nome, est_evolutivo, peso, altura, vida, ataque, defesa FROM pokemon_geral ORDER BY id_pokemon";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+            $index = -5; // Começando em 1 para corresponder aos índices de :nth-child
+            while ($row = $result->fetch_assoc()) {
+
+                echo "<script>";
+                echo "document.querySelector('.est-evolutivo:nth-child($index) .nome th').innerText = '{$row['nome']}';";
+                echo "document.querySelector('.est-evolutivo:nth-child($index) .dados tr:nth-child(1) td').innerText += ' {$row['est_evolutivo']}º';";
+                echo "document.querySelector('.est-evolutivo:nth-child($index) .dados tr:nth-child(2) td').innerText += ' {$row['peso']}kg';";
+                echo "document.querySelector('.est-evolutivo:nth-child($index) .dados tr:nth-child(3) td').innerText += ' {$row['altura']}m';";
+                echo "document.querySelector('.est-evolutivo:nth-child($index) .dados tr:nth-child(4) td').innerText += ' {$row['vida']}';";
+                echo "document.querySelector('.est-evolutivo:nth-child($index) .dados tr:nth-child(5) td').innerText += ' {$row['ataque']}';";
+                echo "document.querySelector('.est-evolutivo:nth-child($index) .dados tr:nth-child(6) td').innerText += ' {$row['defesa']}';";
+                echo "</script>";
+
+                $index = $index + 2;
+            }
+        } else {
+            echo "0 results";
+        }
+
+        $conn->close();
+    ?>
 
 </body>
 </html>

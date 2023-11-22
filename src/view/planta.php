@@ -90,14 +90,14 @@
 
         <hr>
 
-        <section class="est-evolutivo">
+        <section class="est-evolutivo reverse">
             <article class="pokemon">
                 <figure class="img">
-                    <img src="../img/" alt="">
+                    <img src="../img/Ivysaur.png" alt="Ivysaur">
                 </figure>
                 <article class="tipos">
-                    <div class="tipo planta"></div>
-                    <div class="tipo veneno"></div>
+                    <div class="tipo planta">planta</div>
+                    <div class="tipo veneno">veneno</div>
                 </article>
             </article>
             <table class="tabela direita">
@@ -132,11 +132,11 @@
         <section class="est-evolutivo">
             <article class="pokemon">
                 <figure class="img">
-                    <img src="../img/" alt="">
+                    <img src="../img/Venusaur.png" alt="Venusaur">
                 </figure>
                 <article class="tipos">
-                    <div class="tipo planta"></div>
-                    <div class="tipo veneno"></div>
+                    <div class="tipo planta">planta</div>
+                    <div class="tipo veneno">veneno</div>
                 </article>
             </article>
             <table class="tabela esquerda">
@@ -167,6 +167,12 @@
                 </tbody>
             </table>
         </section>
+
+        <!--Para voltar ao topo da tela-->
+        <span class="material-symbols-outlined" id="topo">
+            stat_3
+        </span>
+
     </main>
 
 
@@ -191,7 +197,7 @@
         // Consulta SQL para obter dados dos pokémons
         $sql = "SELECT nome, est_evolutivo, peso, altura, vida, ataque, defesa FROM pokemon_geral ORDER BY id_pokemon";
         $result = $conn->query($sql);
-
+        
         if ($result->num_rows > 0) {
             $index = 1; // Começando em 1 para corresponder aos índices de :nth-child
             while ($row = $result->fetch_assoc()) {
@@ -206,7 +212,7 @@
                 echo "document.querySelector('.est-evolutivo:nth-child($index) .dados tr:nth-child(6) td').innerText += ' {$row['defesa']}';";
                 echo "</script>";
 
-                $index++;
+                $index = $index + 2;
             }
         } else {
             echo "0 results";
