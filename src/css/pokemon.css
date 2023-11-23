@@ -1,4 +1,5 @@
 /* O conteúdo do site */
+/* Cores de fundo de cada página específica*/
 #conteudo.planta {
     background-color: var(--verde-clara);
 }
@@ -19,6 +20,7 @@
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.342);
 }
 
+/* Cada estágio evolutivo do pokémon */
 #conteudo .est-evolutivo {
     display: flex;
     align-items: center;
@@ -29,6 +31,8 @@
 #conteudo .est-evolutivo.reverse {
     flex-direction: row-reverse;
 }
+
+/* Parte em que contém imagem e tipagem do pokémon */
 #conteudo .est-evolutivo .pokemon {
     display: flex;
     flex-direction: column;
@@ -43,6 +47,7 @@
     font-weight: bold;
     text-transform: uppercase;
 }
+/* Cor de fundo diferente para cada tipo */
 #conteudo .est-evolutivo .pokemon .tipos .tipo.planta {
     background-color: var(--verde-escura);
 }
@@ -59,6 +64,7 @@
     background-color: blue;
 }
 
+/* Parte em que contém a tabela com os dados do pokémon */
 #conteudo .est-evolutivo .tabela {
     background-color: black;
     border-radius: 0.5em;

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/padrao.css">
     <link rel="stylesheet" href="../css/pokemon.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <script src="../js/script.js" defer></script>
+    <script src="../js/topo.js" defer></script>
 </head>
 <body>
     
@@ -28,7 +28,7 @@
                     </span>
                     Voltar
                 </a>
-                <a href="#planta">Personagens</a>
+                <a href="#conteudo">Personagens</a>
                 <a href="#rodape">Créditos</a>
             </ul>
         </nav>
@@ -41,6 +41,7 @@
 
             <article class="pokemon">
 
+                <!--Imagem do pokémon-->
                 <figure class="img">
                     <img src="../img/Bulbasaur.png" alt="Bulbasaur">
                 </figure>
@@ -62,7 +63,7 @@
                     </tr>
                 </thead>
 
-                <!--Dados do pokémon-->
+                <!--Cada dado do pokémon a ser mostrado-->
                 <tbody class="dados">
                     <tr>
                         <td class="est-ev">Estágio Evolutivo: </td>
@@ -169,7 +170,7 @@
         </section>
 
         <!--Para voltar ao topo da tela-->
-        <span class="material-symbols-outlined" id="topo">
+        <span class="material-symbols-outlined" aria-hidden="true" aria-label="Volte ao topo da página clicando aqui" id="topo" tabindex="0">
             stat_3
         </span>
 
@@ -192,32 +193,49 @@
     </footer>
 
     <?php
+        // Chamada do arquivo que se conecta com o banco de dados 
         include '../php/conexao.php';
 
         // Consulta SQL para obter dados dos pokémons
         $sql = "SELECT nome, est_evolutivo, peso, altura, vida, ataque, defesa FROM pokemon_geral ORDER BY id_pokemon";
         $result = $conn->query($sql);
         
+        // Condicional para caso tenha pelo menos uma linha da tabela
         if ($result->num_rows > 0) {
+
             $index = 1; // Começando em 1 para corresponder aos índices de :nth-child
+
+            // Pegando cada dado de cada linha da tabela e adicionando ao seu devido lugar
             while ($row = $result->fetch_assoc()) {
 
+                // Feitura de códigos JavaScript
                 echo "<script>";
+
                 echo "document.querySelector('.est-evolutivo:nth-child($index) .nome th').innerText = '{$row['nome']}';";
+
                 echo "document.querySelector('.est-evolutivo:nth-child($index) .dados tr:nth-child(1) td').innerText += ' {$row['est_evolutivo']}º';";
+
                 echo "document.querySelector('.est-evolutivo:nth-child($index) .dados tr:nth-child(2) td').innerText += ' {$row['peso']}kg';";
+
                 echo "document.querySelector('.est-evolutivo:nth-child($index) .dados tr:nth-child(3) td').innerText += ' {$row['altura']}m';";
+                
                 echo "document.querySelector('.est-evolutivo:nth-child($index) .dados tr:nth-child(4) td').innerText += ' {$row['vida']}';";
+
                 echo "document.querySelector('.est-evolutivo:nth-child($index) .dados tr:nth-child(5) td').innerText += ' {$row['ataque']}';";
+
                 echo "document.querySelector('.est-evolutivo:nth-child($index) .dados tr:nth-child(6) td').innerText += ' {$row['defesa']}';";
+
                 echo "</script>";
 
+                // Adição de números impáres consecutivamente em diante
                 $index = $index + 2;
             }
-        } else {
+
+        } else { // Caso não tenha nenhuma linha na tabela do banco de dados
             echo "0 results";
         }
 
+        // Encerramento de sessão
         $conn->close();
     ?>
 

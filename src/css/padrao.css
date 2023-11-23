@@ -1,5 +1,5 @@
-
 /* O cabeçalho do site */
+/* A logo do site */
 #cabecalho .logo {
     background-color: var(--vermelha-escura);
     padding: 1%;
@@ -14,6 +14,7 @@
     height: auto;
 }
 
+/* Barra de navegação horizontal pela própria página */
 #cabecalho .nav {
     background-image: linear-gradient(to bottom, var(--vermelha-escura), var(--vermelha-clara));
     padding: 1%;
@@ -32,7 +33,8 @@
     padding: 2% 0%;
     transition-duration: .2s;
 }
-#cabecalho .nav ul a:hover {
+#cabecalho .nav ul a:hover,
+#cabecalho .nav ul a:focus {
     background-color: white;
     color: var(--vermelha-escura);
     border-radius: 1em;
@@ -53,7 +55,8 @@
     align-items: center;
     gap: 0.2em;
 }
-#cabecalho .nav ul #voltar:hover {
+#cabecalho .nav ul #voltar:hover,
+#cabecalho .nav ul #voltar:focus {
     background-color: white;
     color: var(--azul);
     padding: 1% 4.5%;
@@ -76,7 +79,8 @@
     cursor: pointer;
     transition-duration: .2s;
 }
-#conteudo #topo:hover {
+#conteudo #topo:hover,
+#conteudo #topo:focus {
     background-color: var(--vermelha-escura);
 }
 #conteudo #topo:active {
@@ -93,6 +97,7 @@
     padding: 3%;
 }
 
+/* Parágrafo iniciando o rodapé */
 #rodape p {
     text-align: center;
 }
@@ -101,7 +106,8 @@
     color: white;
     font-weight: bold;
 }
-#rodape p a:hover {
+#rodape p a:hover,
+#rodape p a:focus {
     padding: 0.5%;
 }
 
@@ -109,6 +115,7 @@
     margin: 2% 5%;
 }
 
+/* Parte em que contém as autorias de conteúdo */
 #rodape .autorias {
     display: flex;
     justify-content: center;
@@ -121,7 +128,8 @@
 #rodape .autorias ul a:not(:last-child) {
     margin-bottom: 4%;
 }
-#rodape .autorias ul a:hover {
+#rodape .autorias ul a:hover,
+#rodape .autorias ul a:focus {
     padding: 2%;
 }
 #rodape .autorias ul a, #rodape p a {
@@ -131,7 +139,10 @@
     width: max-content;
     transition-duration: .2s;
 }
-#rodape .autorias ul a:hover, #rodape p a:hover {
+#rodape .autorias ul a:hover,
+#rodape .autorias ul a:focus, 
+#rodape p a:hover,
+#rodape p a:focus {
     background-color: #29A5F2;
     color: white;
     border-radius: 1em;
