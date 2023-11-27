@@ -174,6 +174,7 @@
     </footer>
 
     <?php
+        // Chamada do arquivo que se conecta com o banco de dados 
         include '../php/conexao.php';
 
         // Consulta SQL para obter dados dos pokémons
