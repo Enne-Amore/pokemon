@@ -52,8 +52,11 @@
     transition-duration: .2s;
     cursor: pointer;
 }
+#conteudo .evolucoes .introducao button:focus-visible {
+    outline: auto;
+}
 #conteudo .evolucoes .introducao button:hover,
-#conteudo .evolucoes .introducao button:focus {
+#conteudo .evolucoes .introducao button:focus-visible {
     background-color: var(--verde-escura);
     color: white;
 }
@@ -83,7 +86,8 @@
 #conteudo .evolucoes#agua{
     background-color: var(--azul);
 }
-#conteudo .evolucoes#planta .introducao, #conteudo .evolucoes#agua .introducao {
+#conteudo .evolucoes#planta .introducao,
+#conteudo .evolucoes#agua .introducao {
     text-align: right;
     display: flex;
     align-items: center;
