@@ -64,13 +64,13 @@ Crie o banco de dados com o seguinte nome:
   pokemon
 ```
 
-Importe o arquivo salvo de banco de dados com o seguinte diretório:
+Importe o arquivo de banco de dados que está localizado no seguinte diretório:
 
 ```bash
   /src/banco-de-dados/pokemon.sql
 ```
 
-Para acessar o site, entre em um navegador e digite a seguinte URL no campo de pesquisa
+Para acessar o site no navegador, digite a seguinte URL no campo de pesquisa
 
 ```bash
   localhost:3000
