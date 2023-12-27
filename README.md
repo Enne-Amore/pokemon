@@ -85,7 +85,6 @@ Ou [clique aqui](http://localhost:3000) por mais praticidade
 | Vermelha Escura      | ![#D90D32](https://via.placeholder.com/10/D90D32?text=+) #D90D32 |
 | Vermelha Clara       | ![#D90D43](https://via.placeholder.com/10/D90D43?text=+) #D90D43 |
 | Azul                 | ![#29A5F2](https://via.placeholder.com/10/29A5F2?text=+) #29A5F2 |
-| Roxa                 | ![#a479c0](https://via.placeholder.com/10/a479c0?text=+) #a479c0 |
 | Verde Escura         | ![#01261F](https://via.placeholder.com/10/01261F?text=+) #01261F |
 | Verde Clara          | ![#51A657](https://via.placeholder.com/10/51A657?text=+) #51A657 |
 
