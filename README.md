@@ -4,6 +4,23 @@
  Projeto nosso da disciplina Programação Web trabalhando com PHP e Banco De Dados, usando a série de Pokémon como conteúdo do site. O nosse site se concentra no uso de **banco de dados** e de **PHP.** Ademais, o nosso site consiste em mostrar os dados principais dos pokémon iniciais de kanto.
 
 
+## 🪄 Funcionalidades
+
+ - Barra horizontal de navegação por dentro da página
+ - Mais acessibilidade usando a tecla "tab"
+ - Efeitos de "hover" e de "active" nos elementos clicáveis
+ - Botão de voltar ao topo da página
+ - Apresentar os dados de cada pokémon que estão armazenados no banco de dados
+
+
+## 🖱️ Plataformas Usadas
+
+ - [GitHub](https://github.com/)
+ - [Visual Studio Code](https://code.visualstudio.com/)
+ - [Xampp](https://www.apachefriends.org/pt_br/index.html)
+ - [MySLQ](https://www.mysql.com/)
+
+
 ## 🚀 Tecnologias Utilizadas
 
  - HTML
@@ -13,12 +30,52 @@
  - SQL
 
 
-## 🪄 Funcionalidades
+## 💻 Rodando Localmente
 
- - Barra horizontal de navegação por dentro da página
- - Mais acessibilidade usando a tecla "tab"
- - Efeitos de "hover" e de "active" nos elementos clicáveis
- - Botão de voltar ao topo da página
+Clone o projeto
+
+```bash
+  git clone https://github.com/Enne-Amore/pokemon.git
+```
+
+Entre no diretório do projeto
+
+```bash
+  cd pokemon
+```
+
+Abra o aplicativo **Xampp** e ative as seguintes tecnologias:
+
+```bash
+  Apache
+  MySQL
+```
+
+Para acessar o banco de dados, entre em um navegador e digite a seguinte URL no campo de pesquisa:
+
+```bash
+  localhost/phpmyadmin/
+```
+Ou [clique aqui](http://localhost/phpmyadmin/) por mais praticidade
+
+Crie o banco de dados com o seguinte nome:
+
+```bash
+  pokemon
+```
+
+Importe o arquivo salvo de banco de dados com o seguinte diretório:
+
+```bash
+  /src/banco-de-dados/pokemon.sql
+```
+
+Para acessar o site, entre em um navegador e digite a seguinte URL no campo de pesquisa
+
+```bash
+  localhost:3000
+```
+Ou [clique aqui](http://localhost:3000) por mais praticidade
 
 
 ## 🌈 Documentação De Cores
