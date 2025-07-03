@@ -15,14 +15,14 @@
     <header id="cabecalho">
 
         <figure class="logo">
-            <a href="../../index.html">
+            <a href="../index.html">
                 <img src="../img/pokemon_logo.png" alt="Logo Pokémon">
             </a>
         </figure>
 
         <nav class="nav">
             <ul>
-                <a href="../../index.html" id="voltar">
+                <a href="../index.html" id="voltar">
                     <span class="material-symbols-outlined" id="icon-back">
                         keyboard_backspace
                     </span>
