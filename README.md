@@ -3,6 +3,11 @@
  Projeto nosso da disciplina Programação Web trabalhando com PHP e Banco De Dados, usando a série de Pokémon como conteúdo do site. O nosse site se concentra no uso de **banco de dados** e de **PHP.** Ademais, o nosso site consiste em mostrar os dados principais dos pokémon iniciais de kanto.
 
 
+## 🎞️ Pré-visualização
+
+ <img src="img/preview.png" alt="Pré-visualização do site" width="340" height="200">
+
+
 ## ⚡ Funcionalidades
 
  - Barra horizontal de navegação por dentro da página
