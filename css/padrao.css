@@ -10,7 +10,6 @@
     margin: auto 40%;
 }
 #cabecalho .logo a:focus-visible {
-    outline: auto;
     border-radius: 1em;
 }
 #cabecalho .logo a img {
@@ -82,9 +81,6 @@
     font-size: 1.7em;
     cursor: pointer;
     transition-duration: .2s;
-}
-#conteudo #topo:focus-visible {
-    outline: auto;
 }
 #conteudo #topo:hover,
 #conteudo #topo:focus-visible {

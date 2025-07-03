@@ -24,7 +24,3 @@ html {
     --verde-escura: #01261F;
     --verde-clara: #51A657;
 }
-
-:focus {
-    outline: 0;
-}
