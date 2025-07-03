@@ -1,4 +1,3 @@
-
 # 🔴 Pokémon
 
  Projeto nosso da disciplina Programação Web trabalhando com PHP e Banco De Dados, usando a série de Pokémon como conteúdo do site. O nosse site se concentra no uso de **banco de dados** e de **PHP.** Ademais, o nosso site consiste em mostrar os dados principais dos pokémon iniciais de kanto.
@@ -101,7 +100,15 @@
  - [Imagem De Cada Pokémon](https://www.serebii.net/pokemon/nationalpokedex.shtml)
 
 
+## 👥 Equipe do projeto
+
+ | Nome            | GitHub                              |
+ |-----------------|-------------------------------------|
+ | Enne Jim Pessoa | https://github.com/Enne-Amore       |
+ | Thiago Henrique | https://github.com/ThiagoHenrique22 |
+
+
 ## 🔧 Suporte
 
-Para me contatar como suporte, o meu email é [Enne.Pessoa@gmail.com](mailto:Enne.Pessoa@gmail.com)
+ Para me contatar como suporte, o meu email é [Enne.Pessoa@gmail.com](mailto:Enne.Pessoa@gmail.com)
 
