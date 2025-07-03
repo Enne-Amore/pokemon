@@ -52,9 +52,6 @@
     transition-duration: .2s;
     cursor: pointer;
 }
-#conteudo .evolucoes .introducao button:focus-visible {
-    outline: auto;
-}
 #conteudo .evolucoes .introducao button:hover,
 #conteudo .evolucoes .introducao button:focus-visible {
     background-color: var(--verde-escura);

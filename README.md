@@ -1,10 +1,14 @@
-
-# 🔴 Projeto Pokémon
+# 🔴 Pokémon
 
  Projeto nosso da disciplina Programação Web trabalhando com PHP e Banco De Dados, usando a série de Pokémon como conteúdo do site. O nosse site se concentra no uso de **banco de dados** e de **PHP.** Ademais, o nosso site consiste em mostrar os dados principais dos pokémon iniciais de kanto.
 
 
-## 🪄 Funcionalidades
+## 🎞️ Pré-visualização
+
+ <img src="img/preview.png" alt="Pré-visualização do site" width="340" height="200">
+
+
+## ⚡ Funcionalidades
 
  - Barra horizontal de navegação por dentro da página
  - Mais acessibilidade usando a tecla "tab"
@@ -13,83 +17,131 @@
  - Apresentar os dados de cada pokémon que estão armazenados no banco de dados
 
 
-## 🖱️ Plataformas Usadas
+## 🖱️ Plataformas Utilizadas
 
- - [GitHub](https://github.com/)
- - [Visual Studio Code](https://code.visualstudio.com/)
- - [Xampp](https://www.apachefriends.org/pt_br/index.html)
- - [MySLQ](https://www.mysql.com/)
+ <p align="left">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/GitHub_Invertocat_Logo.svg/250px-GitHub_Invertocat_Logo.svg.png" title="GitHub" alt="GitHub" width="40" height="40"/>
+   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/1200px-Visual_Studio_Code_1.35_icon.svg.png" title="VS Code" alt="VS Code" width="40" height="40"/>
+   <img src="https://images.sftcdn.net/images/t_app-icon-m/p/11787910-96d2-11e6-ab89-00163ec9f5fa/403594526/xampp-windows-icon.png" title="Xampp" alt="Xampp" width="40" height="40"/>
+   <img src="https://www.techspot.com/images2/downloads/topdownload/2020/01/2020-01-28-ts3_thumbs-c3e.png" title="MySQL" alt="MySQL" width="40" height="40"/>
+ </p>
 
 
 ## 🚀 Tecnologias Utilizadas
 
- - HTML
- - CSS
- - JavaScript
- - PHP
- - SQL
+ <p align="left">
+   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" title="HTML" alt="HTML" width="40" height="40"/>
+   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Official_CSS_Logo.svg/2048px-Official_CSS_Logo.svg.png" title="CSS" alt="CSS" width="40" height="40"/>
+   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" title="JavaScript" alt="JavaScript" width="40" height="40"/>
+   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/1200px-PHP-logo.svg.png" title="PHP" alt="PHP" width="60" height="40"/>
+   <img src="https://desenvolvimentoaberto.org/wp-content/uploads/2016/11/logoazuresql.png" title="SQL" alt="SQL" width="40" height="40"/>
+ </p>
 
 
-## 💻 Rodando Localmente
+## 📂 Estrutura do Projeto
 
-Clone o projeto
-
-```bash
-  git clone https://github.com/Enne-Amore/pokemon.git
-```
-
-Entre no diretório do projeto
-
-```bash
-  cd pokemon
-```
-
-Abra o aplicativo **Xampp** e ative as seguintes tecnologias:
-
-```bash
-  Apache
-  MySQL
-```
-
-Para acessar o banco de dados, entre em um navegador e digite a seguinte URL no campo de pesquisa:
-
-```bash
-  localhost/phpmyadmin/
-```
-Ou [clique aqui](http://localhost/phpmyadmin/) por mais praticidade
-
-Crie o banco de dados com o seguinte nome:
-
-```bash
-  pokemon
-```
-
-Importe o arquivo de banco de dados que está localizado no seguinte diretório:
-
-```bash
-  /src/banco-de-dados/pokemon.sql
-```
-
-Para acessar o site no navegador, digite a seguinte URL no campo de pesquisa
-
-```bash
-  localhost:3000
-```
-Ou [clique aqui](http://localhost:3000) por mais praticidade
+ ```plaintext
+ pokemon/
+ ├── css/                    # Arquivos CSS
+ │   ├── index.css
+ │   ├── padrao.css
+ │   ├── pokemon.css
+ │   ├── reset.css
+ ├── db/                     # Arquivos de banco de dados
+ │   ├── pokemon-db.xlsx
+ │   ├── pokemon.slq
+ │   ├── tipagem-pokemon.xlsx
+ ├── docs/                   # Arquivos de documentação do projeto
+ │   ├── autorias.txt
+ │   ├── cores.jpeg
+ │   ├── pokedex-kanto.png
+ │   ├── pokemon.odb
+ │   ├── pokemon.pdf
+ ├── img/                    # Imagens utilizadas
+ ├── js/                     # Arquivos JavaScript
+ │   ├── topo.js
+ ├── php/                    # Arquivos PHP para o banco de dados
+ │   ├── conexao.php
+ │   ├── encerrar_sessao.php
+ ├── view/                   # Arquivos de páginas secundárias
+ │   ├── agua.php
+ │   ├── fogo.php
+ │   ├── planta.php
+ ├── .gitattributes
+ ├── .gitignore
+ ├── index.html              # Arquivo principal de renderização
+ ├── LICENSE                 # Arquivo de licença do projeto
+ ├── README.md
+ ```
 
 
-## 🌈 Documentação De Cores
+## 🛠️ Instalação Local
 
-| Cor                  | Hexadecimal                                                      |
-| -------------------- | ---------------------------------------------------------------- |
-| Vermelha Escura      | ![#D90D32](https://via.placeholder.com/10/D90D32?text=+) #D90D32 |
-| Vermelha Clara       | ![#D90D43](https://via.placeholder.com/10/D90D43?text=+) #D90D43 |
-| Azul                 | ![#29A5F2](https://via.placeholder.com/10/29A5F2?text=+) #29A5F2 |
-| Verde Escura         | ![#01261F](https://via.placeholder.com/10/01261F?text=+) #01261F |
-| Verde Clara          | ![#51A657](https://via.placeholder.com/10/51A657?text=+) #51A657 |
+ Clone o projeto
+ 
+ ```bash
+   git clone https://github.com/Enne-Amore/pokemon.git
+ ```
+ 
+ Entre no diretório do projeto
+ 
+ ```bash
+   cd pokemon
+ ```
+ 
+ Abra o aplicativo **Xampp** e ative as seguintes tecnologias:
+ 
+ ```bash
+   Apache
+   MySQL
+ ```
+ 
+ Para acessar o banco de dados, entre em um navegador e digite a seguinte URL no campo de pesquisa:
+ 
+ ```bash
+   localhost/phpmyadmin/
+ ```
+ Ou [clique aqui](http://localhost/phpmyadmin/) por mais praticidade
+ 
+ Crie o banco de dados com o seguinte nome:
+ 
+ ```bash
+   pokemon
+ ```
+ 
+ Importe o arquivo de banco de dados que está localizado no seguinte diretório:
+ 
+ ```bash
+   /db/pokemon.sql
+ ```
+ 
+ Para acessar o site no navegador, digite a seguinte URL no campo de pesquisa
+ 
+ ```bash
+   localhost:3000
+ ```
+ Ou [clique aqui](http://localhost:3000) por mais praticidade
 
 
-## 🌟 Referências De Uso
+## 🌈 Cores
+
+ | Cor             | Hexadecimal |
+ | --------------- | ----------- |
+ | Vermelha Escura | `#D90D32`   |
+ | Vermelha Clara  | `#D90D43`   |
+ | Azul            | `#29A5F2`   |
+ | Verde Escura    | `#01261F`   |
+ | Verde Clara     | `#51A657`   |
+
+
+## 🔤 Fontes Tipográficas
+
+ - **Arial, Helvetica, Sans-Serif**  
+   Exemplo de uso:  
+   `font-family: Arial, Helvetica, sans-serif;`
+
+
+## 🌟 Referências de Uso
 
  - [Imagem Da Pokedéx](https://pokemon.fandom.com/pt-br/wiki/Pok%C3%A9dex)
  - [Imagem Da Logo](https://pluspng.com/png-36599.html)
@@ -97,7 +149,15 @@ Ou [clique aqui](http://localhost:3000) por mais praticidade
  - [Imagem De Cada Pokémon](https://www.serebii.net/pokemon/nationalpokedex.shtml)
 
 
+## 👥 Equipe do projeto
+
+ | Nome            | GitHub                              |
+ |-----------------|-------------------------------------|
+ | Enne Jim Pessoa | https://github.com/Enne-Amore       |
+ | Thiago Henrique | https://github.com/ThiagoHenrique22 |
+
+
 ## 🔧 Suporte
 
-Para me contatar como suporte, o meu email é EnneFofe10@gmail.com 
+ Para me contatar como suporte, o meu email é [Enne.Pessoa@gmail.com](mailto:Enne.Pessoa@gmail.com)
 
