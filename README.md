@@ -129,6 +129,13 @@
  | Verde Clara     | `#51A657`   |
 
 
+## 🔤 Fontes Tipográficas
+
+ - **Arial, Helvetica, Sans-Serif**  
+   Exemplo de uso:  
+   `font-family: Arial, Helvetica, sans-serif;`
+
+
 ## 🌟 Referências de Uso
 
  - [Imagem Da Pokedéx](https://pokemon.fandom.com/pt-br/wiki/Pok%C3%A9dex)
