@@ -33,6 +33,43 @@
  </p>
 
 
+## 📂 Estrutura do Projeto
+
+ ```plaintext
+ pokemon/
+ ├── css/                    # Arquivos CSS
+ │   ├── index.css
+ │   ├── padrao.css
+ │   ├── pokemon.css
+ │   ├── reset.css
+ ├── db/                     # Arquivos de banco de dados
+ │   ├── pokemon-db.xlsx
+ │   ├── pokemon.slq
+ │   ├── tipagem-pokemon.xlsx
+ ├── docs/                   # Arquivos de documentação do projeto
+ │   ├── autorias.txt
+ │   ├── cores.jpeg
+ │   ├── pokedex-kanto.png
+ │   ├── pokemon.odb
+ │   ├── pokemon.pdf
+ ├── img/                    # Imagens utilizadas
+ ├── js/                     # Arquivos JavaScript
+ │   ├── topo.js
+ ├── php/                    # Arquivos PHP para o banco de dados
+ │   ├── conexao.php
+ │   ├── encerrar_sessao.php
+ ├── view/                   # Arquivos de páginas secundárias
+ │   ├── agua.php
+ │   ├── fogo.php
+ │   ├── planta.php
+ ├── .gitattributes
+ ├── .gitignore
+ ├── index.html              # Arquivo principal de renderização
+ ├── LICENSE                 # Arquivo de licença do projeto
+ ├── README.md
+ ```
+
+
 ## 🛠️ Instalação Local
 
  Clone o projeto
